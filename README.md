@@ -9,5 +9,5 @@ k6 run script.js
 
 2. for run with ``.env``
 ```
-k6 run -e ENDPOINT=http://0.0.0.0:4000/api/test script.js
+k6 run -e ENDPOINT=http://0.0.0.0:4000/api/test script.js --out json=test.json
 ```

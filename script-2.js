@@ -42,11 +42,10 @@ const body = {
 
 const sendTrackingStatus = () => {
   const response = http.post(baseUrl, JSON.stringify(body), {headers});
-
   if (response.status === 200) {
-    console.log('Tracking status sent successfully!');
+    console.log('Tracking status sent successfully!', headers['x-session-id'], headers['x-transaction-id']);
   } else {
-    console.error('Error sending tracking status:', response.body);
+    console.error('Error sending tracking status:', response.body, headers['x-session-id'], headers['x-transaction-id']);
   }
 };
 
